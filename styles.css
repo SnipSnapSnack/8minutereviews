@@ -1,0 +1,211 @@
+/* 8 Minute Reviews - groovin' since 1996 */
+
+body {
+  background-color: #000080;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><rect width='40' height='40' fill='%23000080'/><circle cx='20' cy='20' r='2' fill='%2300ffff'/><circle cx='5' cy='5' r='1' fill='%23ff00ff'/><circle cx='35' cy='35' r='1' fill='%23ffff00'/></svg>");
+  color: #ffff00;
+  font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  max-width: 760px;
+  margin: 10px auto;
+  background-color: #c0c0c0;
+  color: #000000;
+  border: 4px ridge #ffff00;
+  padding: 16px;
+}
+
+h1 {
+  font-family: "Impact", "Arial Black", sans-serif;
+  color: #ff00ff;
+  text-shadow: 2px 2px 0 #00ffff, 4px 4px 0 #000000;
+  text-align: center;
+  font-size: 44px;
+  letter-spacing: 2px;
+  margin: 8px 0;
+}
+
+h2 {
+  font-family: "Times New Roman", serif;
+  color: #800000;
+  border-bottom: 3px double #800000;
+  padding-bottom: 4px;
+}
+
+h3 {
+  color: #008000;
+  font-style: italic;
+}
+
+a:link    { color: #0000ff; text-decoration: underline; }
+a:visited { color: #800080; }
+a:hover   { color: #ff0000; background-color: #ffff00; }
+a:active  { color: #ff00ff; }
+
+.marquee-bar {
+  background-color: #000000;
+  color: #00ff00;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  padding: 6px;
+  border-top: 2px solid #00ff00;
+  border-bottom: 2px solid #00ff00;
+}
+
+.nav {
+  background-color: #ff00ff;
+  color: #ffff00;
+  text-align: center;
+  padding: 8px;
+  border: 2px outset #ffffff;
+  margin: 8px 0;
+  font-weight: bold;
+}
+
+.nav a, .nav a:visited {
+  color: #ffff00;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: #00ffff;
+  background-color: #000000;
+}
+
+.review-card {
+  background-color: #ffffff;
+  border: 3px ridge #808080;
+  padding: 12px;
+  margin: 12px 0;
+}
+
+.review-card img.poster {
+  float: left;
+  margin-right: 12px;
+  border: 2px solid #000000;
+}
+
+.stars {
+  color: #ffaa00;
+  font-size: 24px;
+  letter-spacing: 4px;
+  text-shadow: 1px 1px 0 #000000;
+}
+
+.under-construction {
+  text-align: center;
+  background-color: #ffff00;
+  color: #000000;
+  border: 3px dashed #ff0000;
+  padding: 10px;
+  margin: 16px 0;
+  font-weight: bold;
+}
+
+.under-construction .barber {
+  display: inline-block;
+  width: 100%;
+  height: 14px;
+  background: repeating-linear-gradient(
+    45deg,
+    #ffff00,
+    #ffff00 10px,
+    #000000 10px,
+    #000000 20px
+  );
+  margin: 6px 0;
+}
+
+.counter {
+  display: inline-block;
+  background-color: #000000;
+  color: #00ff00;
+  font-family: "Courier New", monospace;
+  padding: 4px 8px;
+  border: 2px inset #444444;
+  letter-spacing: 4px;
+}
+
+.footer {
+  text-align: center;
+  background-color: #000000;
+  color: #c0c0c0;
+  padding: 10px;
+  margin-top: 16px;
+  font-size: 13px;
+  border-top: 2px ridge #00ffff;
+}
+
+.footer .badge {
+  display: inline-block;
+  background-color: #c0c0c0;
+  color: #000000;
+  font-family: "Times New Roman", serif;
+  font-weight: bold;
+  font-size: 11px;
+  padding: 2px 6px;
+  border: 1px solid #000000;
+  margin: 2px;
+}
+
+.webring {
+  text-align: center;
+  background-color: #008080;
+  color: #ffffff;
+  padding: 8px;
+  border: 2px groove #ffffff;
+  margin: 8px 0;
+}
+
+.webring a, .webring a:visited { color: #ffff00; }
+
+blockquote.pullquote {
+  background-color: #ffffcc;
+  border-left: 6px solid #ff00ff;
+  padding: 8px 12px;
+  font-style: italic;
+  color: #400040;
+}
+
+.clear { clear: both; }
+
+.tagline {
+  text-align: center;
+  font-style: italic;
+  color: #000080;
+  margin-top: -8px;
+  margin-bottom: 8px;
+}
+
+.blink {
+  animation: blinker 1s steps(2, start) infinite;
+}
+
+@keyframes blinker {
+  to { visibility: hidden; }
+}
+
+table.reviews {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+}
+
+table.reviews th {
+  background-color: #000080;
+  color: #ffff00;
+  padding: 6px;
+  border: 2px outset #c0c0c0;
+}
+
+table.reviews td {
+  border: 1px solid #808080;
+  padding: 6px;
+}
+
+table.reviews tr:nth-child(even) td { background-color: #e0e0ff; }
