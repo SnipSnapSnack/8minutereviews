@@ -97,6 +97,42 @@ a:active  { color: #ff00ff; }
   text-shadow: 1px 1px 0 #000000;
 }
 
+.stars-emoji {
+  font-size: 22px;
+  letter-spacing: 2px;
+  margin: 8px 0;
+}
+
+.review-date {
+  display: inline-block;
+  background-color: #000080;
+  color: #ffff00;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 8px;
+  border: 1px solid #000000;
+  margin: 0 0 6px 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+ul.checklist {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 4px;
+}
+
+ul.checklist li {
+  margin: 4px 0;
+  padding-left: 2px;
+}
+
+.review-card s {
+  color: #808080;
+  text-decoration: line-through;
+}
+
 .under-construction {
   text-align: center;
   background-color: #ffff00;
