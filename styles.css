@@ -34,14 +34,16 @@ h1 {
   letter-spacing: 3px;
   margin: 16px 0 12px;
   /* fallback solid color in case background-clip isn't supported */
-  color: #ffd700;
-  /* chrome/gold gradient fill */
-  background: linear-gradient(180deg,
-    #fff5cc 0%,
-    #ffd700 28%,
-    #ff8c00 52%,
-    #ffd700 72%,
-    #fff5cc 100%);
+  color: #ff0000;
+  /* diagonal rainbow gradient fill */
+  background: linear-gradient(135deg,
+    #ff0000 0%,
+    #ff8c00 16%,
+    #ffd700 33%,
+    #00b000 50%,
+    #0080ff 66%,
+    #4b0082 83%,
+    #ee00ee 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
