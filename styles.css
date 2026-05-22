@@ -388,6 +388,43 @@ ul.checklist li {
   outline-offset: -4px;
 }
 
+/* === "Critical Acclaim" press quote === */
+
+.press-quote {
+  background-color: #000000;
+  color: #ffffff;
+  border: 3px ridge #ffd700;
+  padding: 14px 20px 16px;
+  margin: 14px 0;
+  text-align: center;
+}
+
+.press-label {
+  font-family: "Impact", "Arial Black", sans-serif;
+  color: #ffd700;
+  font-size: 18px;
+  letter-spacing: 3px;
+  margin-bottom: 6px;
+  text-shadow: 1px 1px 0 #800000;
+}
+
+.press-quote blockquote {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-size: 15px;
+  color: #ffffff;
+  margin: 8px 12px;
+  line-height: 1.55;
+}
+
+.press-attribution {
+  color: #ffd700;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  margin: 6px 0 0;
+}
+
 /* === Sparkle cursor trail === */
 
 .sparkle {
