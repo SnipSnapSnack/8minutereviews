@@ -13,7 +13,7 @@ body {
 
 .tagline,
 .under-construction,
-.webring {
+.y2k {
   font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
 }
 
@@ -498,7 +498,7 @@ ul.checklist li {
   margin: 2px;
 }
 
-.webring {
+.y2k {
   text-align: center;
   background-color: #008080;
   color: #ffffff;
@@ -507,7 +507,7 @@ ul.checklist li {
   margin: 8px 0;
 }
 
-.webring a, .webring a:visited { color: #ffff00; }
+.y2k a, .y2k a:visited { color: #ffff00; }
 
 blockquote.pullquote {
   background-color: #ffffcc;
