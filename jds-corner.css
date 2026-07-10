@@ -1,7 +1,10 @@
 /* JD's Corner - PSYCHEDELIC / STONER trip theme
    (deliberately its own look, separate from the main site) */
 
-html { overflow-x: hidden; }
+/* overflow-x: clip (not hidden) so neither html nor body becomes a scroll
+   container — hidden forces the cross-axis to `auto`, which made the body a
+   second, nested scroller that ate the first wheel tick on each direction. */
+html { overflow-x: clip; }
 
 body {
   background-color: #14002b;
@@ -11,7 +14,7 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* ---- swirling tie-dye behind everything ---- */
@@ -310,6 +313,41 @@ body::after {
 @keyframes zine-glow {
   0%, 100% { opacity: 1;    text-shadow: 0 0 12px #00e5ff; }
   50%      { opacity: 0.55; text-shadow: 0 0 22px #b400ff; }
+}
+
+/* ---- JD's hazy wall quote ---- */
+.jd-quote {
+  position: relative;
+  max-width: 88%;
+  margin: 24px auto 6px;
+  padding: 18px 24px;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #f4ecff;
+  background: rgba(10, 0, 24, 0.6);
+  border-left: 4px solid #39ff14;
+  border-right: 4px solid #ff1a8c;
+  border-radius: 16px;
+  box-shadow: 0 0 22px rgba(180, 0, 255, 0.5), inset 0 0 26px rgba(0, 229, 255, 0.18);
+  text-shadow: 0 0 8px rgba(0, 229, 255, 0.6);
+  transform: rotate(-1deg);
+}
+.jd-quote p { margin: 4px 0; }
+.jd-quote .jd-quote-punch {
+  color: #39ff14;
+  font-weight: bold;
+  text-shadow: 0 0 12px #39ff14;
+}
+.jd-quote cite {
+  display: block;
+  margin-top: 12px;
+  font-style: normal;
+  font-family: "Impact", "Arial Black", sans-serif;
+  letter-spacing: 2px;
+  color: #ffe600;
+  text-shadow: 0 0 10px #ff8a00;
 }
 
 /* ---- footer ---- */
