@@ -1,0 +1,245 @@
+/* JD's Corner - photocopied-zine / ransom-note PUNK theme
+   (deliberately its own look, separate from the main site) */
+
+body {
+  background-color: #0a0a0a;
+  /* xerox speckle + a couple of grungy blotches */
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><rect width='120' height='120' fill='%230a0a0a'/><circle cx='12' cy='20' r='1' fill='%23222'/><circle cx='80' cy='40' r='1.5' fill='%231c1c1c'/><circle cx='45' cy='90' r='1' fill='%23222'/><circle cx='100' cy='100' r='1' fill='%23191919'/><circle cx='60' cy='15' r='0.8' fill='%23202020'/><circle cx='30' cy='55' r='1.2' fill='%231a1a1a'/></svg>");
+  color: #f2f2f2;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---- grimy top banner ---- */
+.zine-bar {
+  background-color: #000000;
+  color: #39ff14;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 6px;
+  border-top: 3px solid #ff1a8c;
+  border-bottom: 3px solid #ff1a8c;
+  text-transform: uppercase;
+}
+
+/* ---- the "photocopied flyer" ---- */
+.zine {
+  position: relative;
+  width: 720px;
+  margin: 30px auto;
+  background-color: #e9e6df;
+  color: #111111;
+  padding: 26px 30px 34px;
+  border: 3px solid #000000;
+  box-shadow:
+    0 0 0 6px #0a0a0a,
+    10px 12px 0 rgba(0, 0, 0, 0.6);
+  transform: rotate(-1.2deg);
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'><rect width='100' height='100' fill='%23e9e6df'/><circle cx='18' cy='30' r='1' fill='%23cfcabb'/><circle cx='70' cy='60' r='1.4' fill='%23d5d0c2'/><circle cx='50' cy='85' r='1' fill='%23cbc6b8'/><circle cx='88' cy='14' r='1' fill='%23d2cdbf'/></svg>");
+}
+
+/* strips of "tape" holding the flyer down */
+.zine::before,
+.zine::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 30px;
+  background-color: rgba(200, 195, 170, 0.55);
+  border-left: 1px dashed rgba(0, 0, 0, 0.25);
+  border-right: 1px dashed rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+.zine::before { top: -14px; left: -26px; transform: rotate(-24deg); }
+.zine::after  { bottom: -14px; right: -26px; transform: rotate(-24deg); }
+
+/* ---- ransom-note title ---- */
+.ransom {
+  text-align: center;
+  margin: 4px 0 10px;
+  line-height: 1.1;
+}
+.ransom span {
+  display: inline-block;
+  padding: 2px 8px;
+  margin: 2px 1px;
+  font-weight: 900;
+  font-size: 46px;
+  color: #000000;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.55);
+}
+/* alternate the cut-out letters: fonts, tilts, ink colors */
+.ransom span:nth-child(6n+1) { font-family: "Impact","Arial Black",sans-serif; transform: rotate(-6deg); }
+.ransom span:nth-child(6n+2) { font-family: "Times New Roman",serif; transform: rotate(5deg); background:#111; color:#fff; }
+.ransom span:nth-child(6n+3) { font-family: "Georgia",serif; transform: rotate(-3deg); background:#ff1a8c; color:#fff; }
+.ransom span:nth-child(6n+4) { font-family: "Courier New",monospace; transform: rotate(7deg); }
+.ransom span:nth-child(6n+5) { font-family: "Arial Black",sans-serif; transform: rotate(-8deg); background:#39ff14; color:#111; }
+.ransom span:nth-child(6n+6) { font-family: "Comic Sans MS",cursive; transform: rotate(4deg); background:#ffe600; color:#111; }
+.ransom .space { background: transparent; box-shadow: none; width: 14px; }
+
+.zine-tagline {
+  text-align: center;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 18px;
+  letter-spacing: 1px;
+}
+.zine-tagline .anarchy { color: #ff1a8c; font-size: 20px; }
+
+/* ---- nav: stickers slapped on ---- */
+.zine-nav {
+  text-align: center;
+  margin: 0 0 20px;
+}
+.zine-nav a {
+  display: inline-block;
+  font-family: "Impact", "Arial Black", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #000000;
+  border: 2px solid #000000;
+  padding: 4px 10px;
+  margin: 4px 3px;
+}
+.zine-nav a:nth-child(2) { background:#ff1a8c; transform: rotate(-2deg); }
+.zine-nav a:nth-child(3) { background:#39ff14; color:#000; transform: rotate(1.5deg); }
+.zine-nav a:nth-child(4) { background:#ffe600; color:#000; transform: rotate(-1.5deg); }
+.zine-nav a:hover { outline: 2px dashed #ff1a8c; outline-offset: 2px; }
+
+/* ---- caution / construction strip ---- */
+.caution {
+  background: repeating-linear-gradient(45deg,
+    #ffe600, #ffe600 16px, #000000 16px, #000000 32px);
+  border: 3px solid #000000;
+  padding: 4px;
+  margin: 18px 0;
+}
+.caution-inner {
+  background: #000000;
+  color: #ffe600;
+  text-align: center;
+  font-family: "Impact", "Arial Black", sans-serif;
+  letter-spacing: 2px;
+  font-size: 20px;
+  padding: 8px;
+  text-transform: uppercase;
+}
+
+/* ---- main coming-soon panel ---- */
+.zine-panel {
+  background-color: #111111;
+  color: #f2f2f2;
+  border: 3px solid #000000;
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.5);
+  padding: 22px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* JD mugshot, xeroxed and stamped */
+.mugshot {
+  position: relative;
+  display: inline-block;
+  transform: rotate(2deg);
+  margin-bottom: 10px;
+}
+.mugshot img {
+  display: block;
+  width: 130px;
+  height: 130px;
+  border: 4px solid #ffffff;
+  filter: grayscale(1) contrast(1.5) brightness(1.05);
+  image-rendering: pixelated;
+  box-shadow: 4px 4px 0 #000000;
+}
+.mugshot .stamp {
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-6deg);
+  background-color: #ff1a8c;
+  color: #ffffff;
+  font-family: "Impact", "Arial Black", sans-serif;
+  letter-spacing: 1px;
+  font-size: 12px;
+  padding: 3px 10px;
+  border: 2px solid #000000;
+  white-space: nowrap;
+}
+
+.zine-panel h2 {
+  font-family: "Impact", "Arial Black", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #39ff14;
+  font-size: 30px;
+  margin: 18px 0 12px;
+  text-shadow: 2px 2px 0 #000000;
+}
+.zine-panel p { margin: 10px 0; }
+.zine-panel .spray {
+  color: #ff1a8c;
+  font-weight: bold;
+  font-family: "Impact", "Arial Black", sans-serif;
+  letter-spacing: 1px;
+}
+.rad { color: #ffe600; font-weight: bold; }
+
+.zine-blink {
+  animation: zine-blink 0.9s steps(2, start) infinite;
+  color: #39ff14;
+  font-weight: bold;
+}
+@keyframes zine-blink { to { opacity: 0; } }
+
+/* ---- footer ---- */
+.zine-footer {
+  text-align: center;
+  color: #888;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  margin: 18px 0 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.zine-footer a { color: #39ff14; }
+.zine-footer .tag {
+  display: inline-block;
+  border: 1px solid #555;
+  padding: 2px 6px;
+  margin: 3px;
+  color: #ccc;
+}
+
+.back-home {
+  text-align: center;
+  margin: 22px 0 0;
+}
+.back-home a {
+  font-family: "Impact", "Arial Black", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #000;
+  background: #39ff14;
+  text-decoration: none;
+  border: 3px solid #000;
+  padding: 8px 18px;
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.6);
+  display: inline-block;
+}
+.back-home a:hover { background: #ff1a8c; color: #fff; }
+
+@media (prefers-reduced-motion: reduce) {
+  .zine-blink { animation: none; }
+}
