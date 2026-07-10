@@ -98,8 +98,48 @@ body {
   100% { transform: rotate(-7deg) scale(0.94); }
 }
 
+/* "Click Here!" sticker slapped over the image, dancing the opposite way.
+   It's nested inside the badge, so it inherits the badge's rotation; using
+   double the amplitude in the opposite phase makes its *net* (on-screen)
+   rotation the exact mirror of the badge's, and the counter-scale keeps the
+   sticker a steady size while the badge breathes. */
+.jd-click-here {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  background-color: #ff0000;
+  color: #ffff00;
+  font-family: "Impact", "Arial Black", sans-serif;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 2px 5px;
+  border: 2px solid #ffffff;
+  border-radius: 3px;
+  white-space: nowrap;
+  box-shadow: 1px 1px 0 #000000;
+  pointer-events: none;
+  animation: jd-click-dance 1.6s ease-in-out infinite;
+}
+
+@keyframes jd-click-dance {
+  0%   { transform: translate(-50%, -50%) rotate(14deg)  scale(1.064); }
+  50%  { transform: translate(-50%, -50%) rotate(-14deg) scale(0.943); }
+  100% { transform: translate(-50%, -50%) rotate(14deg)  scale(1.064); }
+}
+
+.jd-corner-badge:hover .jd-click-here {
+  animation-play-state: paused;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .jd-corner-badge { animation: none; }
+  .jd-click-here {
+    animation: none;
+    transform: translate(-50%, -50%) rotate(8deg);
+  }
 }
 
 h1 {
