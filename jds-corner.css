@@ -196,6 +196,18 @@ body {
 }
 .rad { color: #ffe600; font-weight: bold; }
 
+.disclaimer {
+  font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+  font-size: 12px;
+  color: #cfcfcf;
+  max-width: 460px;
+  margin: 16px auto 0;
+  transform: rotate(-1.5deg);
+  border-top: 1px dashed #555;
+  padding-top: 10px;
+}
+.disclaimer u { color: #ff1a8c; }
+
 .zine-blink {
   animation: zine-blink 0.9s steps(2, start) infinite;
   color: #39ff14;
