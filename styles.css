@@ -105,7 +105,7 @@ body {
    sticker a steady size while the badge breathes. */
 .jd-click-here {
   position: absolute;
-  top: 50%;
+  top: 62%;
   left: 50%;
   z-index: 10;
   background-color: #ff0000;
