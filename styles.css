@@ -1,11 +1,5 @@
 /* 8 Minute Reviews - groovin' since 1996 */
 
-html {
-  /* clip the JD's Corner badge where it spills past the viewport edge on
-     narrow screens instead of widening the page / revealing the starfield */
-  overflow-x: hidden;
-}
-
 body {
   overflow-x: hidden;
   background-color: #000080;
@@ -32,114 +26,6 @@ body {
   color: #000000;
   border: 4px ridge #ffff00;
   padding: 16px;
-}
-
-/* === JD's Corner "coming soon" badge (home page, top-right) === */
-
-.jd-corner-badge {
-  position: absolute;
-  top: 8px;
-  right: -22px;
-  z-index: 500;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 96px;
-  padding: 4px 0 6px;
-  background-color: #ffff00;
-  border: 3px ridge #ff00ff;
-  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.45);
-  text-decoration: none;
-  transform-origin: 50% 50%;
-  animation: jd-dance 1.6s ease-in-out infinite;
-}
-
-.jd-corner-badge:hover {
-  background-color: #ffff00;
-  animation-play-state: paused;
-}
-
-.jd-corner-badge img {
-  display: block;
-  border: 2px solid #000000;
-  image-rendering: pixelated;
-}
-
-.jd-corner-top,
-.jd-corner-bottom {
-  display: block;
-  text-align: center;
-  font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
-  font-weight: bold;
-  line-height: 1.1;
-  color: #000000;
-  text-decoration: none;
-}
-
-.jd-corner-top {
-  color: #ff0000;
-  font-size: 11px;
-  margin-bottom: 3px;
-}
-
-.jd-corner-bottom {
-  color: #800080;
-  font-size: 13px;
-  margin-top: 3px;
-}
-
-.jd-corner-badge:hover .jd-corner-top {
-  color: #0000ff;
-}
-
-@keyframes jd-dance {
-  0%   { transform: rotate(-7deg) scale(0.94); }
-  50%  { transform: rotate(7deg)  scale(1.06); }
-  100% { transform: rotate(-7deg) scale(0.94); }
-}
-
-/* "Click Here!" sticker slapped over the image, dancing the opposite way.
-   It's nested inside the badge, so it inherits the badge's rotation; using
-   double the amplitude in the opposite phase makes its *net* (on-screen)
-   rotation the exact mirror of the badge's, and the counter-scale keeps the
-   sticker a steady size while the badge breathes. */
-.jd-click-here {
-  position: absolute;
-  top: 62%;
-  left: 50%;
-  z-index: 10;
-  background-color: #ff0000;
-  color: #ffff00;
-  font-family: "Impact", "Arial Black", sans-serif;
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  padding: 2px 5px;
-  border: 2px solid #ffffff;
-  border-radius: 3px;
-  white-space: nowrap;
-  box-shadow: 1px 1px 0 #000000;
-  pointer-events: none;
-  animation: jd-click-dance 1.6s ease-in-out infinite;
-}
-
-@keyframes jd-click-dance {
-  0%   { transform: translate(-50%, -50%) rotate(14deg)  scale(1.064); }
-  50%  { transform: translate(-50%, -50%) rotate(-14deg) scale(0.943); }
-  100% { transform: translate(-50%, -50%) rotate(14deg)  scale(1.064); }
-}
-
-.jd-corner-badge:hover .jd-click-here {
-  animation-play-state: paused;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .jd-corner-badge { animation: none; }
-  .jd-click-here {
-    animation: none;
-    transform: translate(-50%, -50%) rotate(8deg);
-  }
 }
 
 h1 {
