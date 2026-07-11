@@ -128,9 +128,9 @@ Adding a page makes the new total `N+1`.
    structure of any existing `pageK.html`): marquee → h1/tagline/nav → h2 → top
    pagination → the 6 review cards → bottom pagination → page-numbers → y2k →
    footer → `sparkles.js`. Label it `Page N of {N+1}`.
-   Do **not** carry over `index.html`'s home-only chrome (JD corner badge,
-   press-quote, under-construction banner, visitor counter, newsletter line,
-   `popup.js`) — those belong only to the home/newest page.
+   Do **not** carry over `index.html`'s home-only chrome (press-quote,
+   under-construction banner, visitor counter, newsletter line, `popup.js`)
+   — those belong only to the home/newest page.
 2. **Reset `index.html`** to the new newest page: keep its home chrome, relabel it
    `Page {N+1} of {N+1}`, replace its review list with just the new review, set
    `Older Reviews`/`Prev` → `page{N}.html`, keep `Newer`/`Next` disabled.
